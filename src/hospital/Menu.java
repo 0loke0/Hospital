@@ -9,6 +9,7 @@ import hospital.habiltaciones.Habitaciones;
 import hospital.Objetos.Inventario;
 import hospital.personas.Personas;
 import hospital.personas.Citas;
+import hospital.personas.Creador;
 import hospital.personas.Empleado;
 import hospital.personas.Medico;
 import hospital.personas.Paciente;
@@ -137,7 +138,8 @@ public class Menu {
 
                 //crea los documentos 
                 listaEmp.add(emp);
-
+                Creador creador= new Creador();
+                creador.creadorEmpleado(emp);
                 contadorEmp++;
             } else {
                 System.out.println("el Documento ya pertenece a otro usuario");
